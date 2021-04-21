@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   const [name, setName] = useState('Shadow Ninja');
@@ -7,8 +7,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text></Text>
-      <Text>name: {name} age: {age}</Text>
+      <Text>Enter Name:</Text>
+      <TextInput style={styles.input} />
+      <TextInput>name: {name} age: {age}</TextInput>
       
     </View>
   );
@@ -22,5 +23,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'goldenrod'
   },
-
+  input:{
+    borderWidth: 1,
+    borderColor: '#777',
+    padding: 8,
+    margin: 10,
+    width:200,
+  }
 });
