@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const [people, setPeople] = useState([
@@ -17,13 +17,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
+      {/* <ScrollView>
         {people.map((item) => (
             <View key={item.key}>
               <Text style={styles.item}>{item.name.toUpperCase()}</Text>
             </View>
         ))}
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 }
