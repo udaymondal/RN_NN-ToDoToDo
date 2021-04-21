@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  
+  const [people, setPeople] = useState([
+    { name: 'ninja', key: '1' },
+    { name: 'shau', key: '2' },
+    { name: 'blade', key: '3' },
+    { name: 'goku', key: '4' },
+    { name: 'vegeta', key: '5' },
+    { name: 'naruto', key: '6' },
+    { name: 'eren', key: '7' },
+    { name: 'saskeu', key: '8' },
+    { name: 'gohan', key: '9' },
+    { name: 'chichi', key: '10' }
+  ])
+
   return (
     <View style={styles.container}>
-      
+      <ScrollView>
+        {people.map((item) => (
+            <View key={item.key}>
+              <Text style={styles.item}>{item.name}</Text>
+            </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -14,9 +32,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 50,
+    paddingHorizontal: 20,
+    // alignItems: 'center',
+    // justifyContent: 'center',
     backgroundColor: 'goldenrod'
   },
-  
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: 'white',
+    fontSize: 24
+  }
+
 });
