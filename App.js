@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const [people, setPeople] = useState([
@@ -17,6 +17,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+
+      <FlatList
+      data={people}
+      renderItem={ ({ item }) =>(
+        <Text style={styles.item}>{item.name.toUpperCase()}</Text>
+      )}
+      />
       {/* <ScrollView>
         {people.map((item) => (
             <View key={item.key}>
