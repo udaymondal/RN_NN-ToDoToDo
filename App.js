@@ -10,8 +10,16 @@ export default function App() {
       <Text>Enter Name:</Text>
       <TextInput
         style={styles.input}
+        multiline
         placeholder='e.g John Doe'
         onChangeText={(val) => setName(val)}
+      />
+      <Text>Enter Age:</Text>
+      <TextInput
+        style={styles.input}
+        keyboardType='numeric'
+        placeholder='e.g 25'
+        onChangeText={(val) => setAge(val)}
       />
       <TextInput>name: {name} age: {age}</TextInput>
 
