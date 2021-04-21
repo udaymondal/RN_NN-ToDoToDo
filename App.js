@@ -20,7 +20,7 @@ export default function App() {
       <ScrollView>
         {people.map((item) => (
             <View key={item.key}>
-              <Text style={styles.item}>{item.name}</Text>
+              <Text style={styles.item}>{item.name.toUpperCase()}</Text>
             </View>
         ))}
       </ScrollView>
@@ -36,12 +36,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     // alignItems: 'center',
     // justifyContent: 'center',
-    backgroundColor: 'goldenrod'
   },
   item: {
     marginTop: 24,
     padding: 30,
-    backgroundColor: 'white',
+    backgroundColor: 'tomato',
     fontSize: 24
   }
 
