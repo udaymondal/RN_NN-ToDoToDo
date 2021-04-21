@@ -8,9 +8,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Enter Name:</Text>
-      <TextInput style={styles.input} />
+      <TextInput
+        style={styles.input}
+        placeholder='e.g John Doe'
+        onChangeText={(val) => setName(val)}
+      />
       <TextInput>name: {name} age: {age}</TextInput>
-      
+
     </View>
   );
 }
@@ -23,11 +27,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'goldenrod'
   },
-  input:{
+  input: {
     borderWidth: 1,
-    borderColor: '#777',
+    borderColor: 'white',
     padding: 8,
     margin: 10,
-    width:200,
+    width: 200,
   }
 });
