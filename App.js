@@ -19,18 +19,12 @@ export default function App() {
     <View style={styles.container}>
 
       <FlatList
-      data={people}
-      renderItem={ ({ item }) =>(
-        <Text style={styles.item}>{item.name.toUpperCase()}</Text>
-      )}
+        data={people}
+        renderItem={({ item }) => (
+          <Text style={styles.item}>{item.name.toUpperCase()}</Text>
+        )}
       />
-      {/* <ScrollView>
-        {people.map((item) => (
-            <View key={item.key}>
-              <Text style={styles.item}>{item.name.toUpperCase()}</Text>
-            </View>
-        ))}
-      </ScrollView> */}
+      
     </View>
   );
 }
@@ -47,7 +41,7 @@ const styles = StyleSheet.create({
   item: {
     marginTop: 24,
     padding: 30,
-    backgroundColor: 'tomato',
+    backgroundColor: 'pink',
     fontSize: 24
   }
 
